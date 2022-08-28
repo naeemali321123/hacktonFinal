@@ -1,0 +1,22 @@
+#about ul li,
+#services ul li,
+#other ul li {
+	padding-bottom: 10px;
+	font-size: 18px;
+	font-family: Nunito-Regular;
+	list-style: none;
+}
+
+#about ul li a,
+#services ul li a,
+#other ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+#about ul li a:hover,
+#services ul li a:hover,
+#other ul li a:hover {
+	color: wheat;
+	text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+.whiteHeading h1 {
+	font-size: 70px;
+	font-family: Archivo-Bold;
+	padding: 20px 0px;
+	color: white;
+}
+#redHeading h1 {
+	color: #f64b3c;
+}
+/* responsive 4 tap */
+@media only screen and (max-width: 1000px) {
+	.whiteHeading h1,
+	#redHeading h1 {
+		font-size: 50px;
+	}
+}

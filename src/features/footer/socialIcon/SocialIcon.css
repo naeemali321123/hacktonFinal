@@ -1,0 +1,15 @@
+#socialIcon {
+	display: flex;
+}
+
+#socialIcon a:hover {
+	font-size: 22px;
+}
+
+.fab img{
+	width: 40px;
+	margin: 5px;
+}
+.fab img:hover{
+	width: 42px;
+}
