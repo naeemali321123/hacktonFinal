@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Bootstrap from "../pages/bootstrap/Bootstrap";
+import Home from "../pages/home/Home";
 import TodoApp from "../pages/todoApp/TodoApp";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import { useSelector } from "react-redux";
 import NavbarBootStcrap from "../features/navbarBootstrap/NavbarBootStcrap";
 import Links from "../features/footer/links/Links";
-import AddProduct from "../features/addProduct/AddProduct";
-import ProductDetail from "../features/productDetail/ProductDetail";
+import AddProduct from "../pages/addProduct/AddProduct";
+import ProductDetail from "../pages/productDetail/ProductDetail";
 import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
 
@@ -20,12 +20,12 @@ export default function Routing() {
       <Router>
         <NavbarBootStcrap />
         <Routes>
-          <Route path="/" element={<Bootstrap />} />
+          <Route path="/" element={<Home />} />
           <Route path="/todoApp" element={<TodoApp />} />
           <Route path="/register" element={<Register />} />
           <Route
             path="/login"
-            element={isLoginUser ? <Bootstrap /> : <Login />}
+            element={isLoginUser ? <Home /> : <Login />}
           />
           <Route
             path="/addproduct"

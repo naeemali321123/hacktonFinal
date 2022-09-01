@@ -11,21 +11,21 @@ export default function Slider() {
           data-bs-ride="false"
         >
           <div className="carousel-indicators">
-            <button
+            <button style={{width: 10, height: 10, borderRadius: "50%"}}
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="0"
-              className="active circle"
+              className="active circle w-10"
               aria-current="true"
               aria-label="Slide 1"
             ></button>
-            <button
+            <button style={{width: 10, height: 10, borderRadius: "50%"}}
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="1"
               aria-label="Slide 2"
             ></button>
-            <button
+            <button style={{width: 10, height: 10, borderRadius: "50%"}}
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="2"

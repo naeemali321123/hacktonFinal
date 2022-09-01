@@ -1,14 +1,15 @@
-import { async } from "@firebase/util";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
-import { addProduct } from "../../store/productSlice";
+import { ToastContainer } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { productDtlInfo } from "../../store/productDtlSlice";
+import ProductDetail from "../../pages/productDetail/ProductDetail";
+import { productDtl } from "../../store/productSlice";
 
 export default function ProductSection() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const data = useSelector((store) => store.product.data);
-  // console.log("sync by store product reducer state", data);
-  // const dispatch = useDispatch();
 
   return (
     <>
@@ -24,12 +25,18 @@ export default function ProductSection() {
               alt="..."
               height={300}
             />
-            <div className="card-body d-flex flex-column justify-content-center align-items-center">
-              <h5 className="card-title">{obj.title}</h5>
+            <div className="card-body d-flex flex-column justify-content-end align-items-center">
+              <h5 className="card-title my-4">{obj.title}</h5>
               <div className="text-center">
-                <Link to="/" className="btn btn-success">
+                <button
+                  onClick={() => {
+                    dispatch(productDtl(obj))
+                    navigate('/productDetail')
+                  }}
+                  className="btn btn-success"
+                >
                   More Details
-                </Link>
+                </button>
               </div>
             </div>
             <ToastContainer />
